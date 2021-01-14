@@ -19,6 +19,7 @@ module.exports = {
     'react',
   ],
   rules: {
-    'linebreak-style': 2
-  }
+    'linebreak-style': 2,
+    'no-console': 'off',
+  },
 };
