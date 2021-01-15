@@ -25,8 +25,4 @@ const randomDescription = () => {
   return lorem.generateParagraphs(1);
 };
 
-// console.log(randomName());
-// console.log(randomStars());
-// console.log(randomDescription());
-
 module.exports = { randomName, randomStars, randomDescription };

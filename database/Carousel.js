@@ -11,7 +11,6 @@ const carouselSchema = new mongoose.Schema({
   description: String,
 });
 
-// set mongoDB to not use automatic '_id' index creation
 carouselSchema.set('autoIndex', false);
 
 const carouselItem = mongoose.model('carouselItem', carouselSchema);

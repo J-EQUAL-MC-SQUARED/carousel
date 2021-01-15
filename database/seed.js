@@ -1,13 +1,28 @@
-// import mongoose and carousel Model
-const db = require('./index.js');
+const mongoose = require('mongoose');
+const utils = require('./utils.js');
 const carouselItem = require('./Carousel.js');
 
-// get the generated data from generator
-// TODO: const seedData = data from generateDatabase
+const seedData = [];
 
-// take the entire array and generate documents in mongo
-const seedCarouselDB = function() {
-  carouselItem.create(seedData);
+const generate = () => {
+  for (let i = 0; i < 100; i += 1) {
+    const item = {
+      product_id: i,
+      imageUrl: 'https://picsum.photos/650/460',
+      name: utils.randomName(),
+      stars: utils.randomStars(),
+      description: utils.randomDescription(),
+    };
+    seedData.push(item);
+  }
 };
 
-// seedCarouselDB();
+generate();
+
+const seedCarouselDB = () => {
+  carouselItem.create(seedData)
+    .then(() => mongoose.connection.close())
+    .catch(() => console.log('error seeding db.'));
+};
+
+seedCarouselDB();

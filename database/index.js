@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const mongoUri = 'mongodb://localhost/carouselDB';
 
 const db = mongoose.connect(mongoUri, { userNewUrlParser: true, useUnifiedTopology: true })
