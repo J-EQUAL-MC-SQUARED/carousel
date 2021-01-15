@@ -9,7 +9,9 @@ const randomName = () => {
   return `${adj1[randomIndex()]} ${adj2[randomIndex()]} ${noun[randomIndex()]}`;
 };
 
-const randomStars = () => (Math.floor((Math.random() * 6)));
+const randomStars = () => parseFloat((Math.random() * 5).toFixed(1));
+
+const randomPrice = () => parseFloat((Math.random() * 500).toFixed(2));
 
 const randomDescription = () => {
   const lorem = new LoremIpsum({
@@ -25,4 +27,9 @@ const randomDescription = () => {
   return lorem.generateParagraphs(1);
 };
 
-module.exports = { randomName, randomStars, randomDescription };
+module.exports = {
+  randomName,
+  randomStars,
+  randomPrice,
+  randomDescription,
+};

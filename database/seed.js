@@ -15,6 +15,7 @@ const generate = () => {
         name: utils.randomName(),
         stars: utils.randomStars(),
         description: utils.randomDescription(),
+        price: utils.randomPrice(),
       };
       relatedItems.push(item);
       count -= 1;
