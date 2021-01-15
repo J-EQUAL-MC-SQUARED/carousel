@@ -1,18 +1,20 @@
 import React from 'react';
+import CarouselItem from './CarouselItem';
 
-class Carousel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div className="carousel-main">
-        something
-      </div>
-    );
-  }
-}
+const Carousel = ({items}) => {
+  return (
+    <div>
+      {items.map(item => (
+        <CarouselItem
+          name={item.name}
+          price={item.price}
+          stars={item.stars}
+          imageUrl={item.imageUrl}
+          description={item.description}
+        />)
+      )}
+    </div>
+  )
+};
 
 export default Carousel;

@@ -1,10 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import Carousel from './Carousel';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // for now, productId is randomly generated
       id: Math.floor(Math.random() * 100),
       items: [],
     };
@@ -25,9 +27,11 @@ class App extends React.Component {
   }
 
   render() {
+    const { items } = this.state;
     return (
       <div>
-        <h2>List of Similar Items:</h2>
+        <h2>Carousel List of Similar Items:</h2>
+        <Carousel items={items} />
       </div>
     );
   }
