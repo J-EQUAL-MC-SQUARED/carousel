@@ -1,15 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/carouselDB').then(() => console.log('Connected to MongoDB'));
+const mongoUri = 'mongodb://localhost/carouselDB';
 
-const carouselSchema = new mongoose.Schema({
-  product_id: { type: Number, unique: true },
-  imageUrl: String,
-  name: String,
-  stars: Number,
-  description: String,
-});
+const db = mongoose.connect(mongoUri, { userNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(() => console.log('Problem connecting to MongoDB'));
 
-const carouselItem = mongoose.model('carouselItem', carouselSchema);
-
-export default carouselItem;
+module.exports = db;
