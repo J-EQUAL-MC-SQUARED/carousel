@@ -29,8 +29,8 @@ class App extends React.Component {
   render() {
     const { items } = this.state;
     return (
-      <div>
-        <h2>Carousel List of Similar Items:</h2>
+      <div id="carousel-main">
+        <h2 id="carousel-title">Carousel List of Similar Items:</h2>
         <Carousel items={items} />
       </div>
     );
