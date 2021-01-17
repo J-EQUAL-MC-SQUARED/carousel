@@ -26,6 +26,9 @@ class App extends React.Component {
       });
   }
 
+  // eventually, wrap Carousel in another <div> with style prop left:
+  // manipulate left: using buttons to simulate scrolling
+
   render() {
     const { items } = this.state;
     return (

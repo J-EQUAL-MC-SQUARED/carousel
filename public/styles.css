@@ -1,0 +1,52 @@
+html {
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img,
+.item-image {
+  height: 225px;
+}
+
+#carousel-main {
+  border: 1px solid black;
+  display: block;
+  line-height: 22px;
+  width: 100%;
+  margin-top: 20px;
+  box-sizing: border-box;
+  position: relative;
+
+}
+
+#carousel-title {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0px 28px 18px;
+}
+
+/* overflow: hidden; <-- hides the list of items within the carousel, crucial to scrolling feature */
+/* transition: left | .40s duration | ease-out timing | 0s no delay when clicked */
+
+#carousel-list {
+  display: flex;
+}
+
+img,
+.item-image {
+  border: 0px;
+  vertical-align: middle;
+}
+
+.carousel-list-item {
+  flex-basis: auto;
+  margin: 5px;
+}
+
+.item-body-name {
+  font-size: 16px;
+}
+
+.item-body-price {
+  font-weight: bold;
+}
