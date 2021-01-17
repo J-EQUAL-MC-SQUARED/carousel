@@ -2,11 +2,6 @@ html {
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-img,
-.item-image {
-  height: 225px;
-}
-
 #carousel-main {
   border: 1px solid black;
   display: block;
@@ -34,17 +29,26 @@ img,
 
 img,
 .item-image {
+  height: 225px;
+  width: 225px;
   border: 0px;
   vertical-align: middle;
 }
 
 .carousel-list-item {
   flex-basis: auto;
+  height: 300px;
   margin: 5px;
 }
 
 .item-body-name {
-  font-size: 16px;
+  font-size: 15px;
+  max-height: 40px;
+  overflow: hidden;
+}
+
+.item-body-stars {
+  margin: 4px 0px;
 }
 
 .item-body-price {
