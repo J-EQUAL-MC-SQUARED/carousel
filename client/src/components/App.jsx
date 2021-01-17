@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Carousel from './Carousel';
+import Controller from './Controller';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class App extends React.Component {
     return (
       <div id="carousel-main">
         <h2 id="carousel-title">Carousel List of Similar Items:</h2>
-        <Carousel items={items} />
+        <Controller items={items} />
       </div>
     );
   }
