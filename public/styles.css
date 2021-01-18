@@ -31,6 +31,8 @@ html {
   display: flex;
   position: relative;
   transition: left .50s ease-out 0s;
+  left: min(-1350px, 0px);
+  left: max(0px, -1350px);
 }
 
 img,
