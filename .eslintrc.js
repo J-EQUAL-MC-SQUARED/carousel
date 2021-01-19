@@ -22,4 +22,7 @@ module.exports = {
     'linebreak-style': 2,
     'no-console': 'off',
   },
+  ignorePatterns: [
+    'spec',
+  ],
 };

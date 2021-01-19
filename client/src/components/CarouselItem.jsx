@@ -6,7 +6,7 @@ const CarouselItem = ({
 }) => (
 
   <div className="carousel-list-item">
-    <img className="item-img" src={imageUrl} alt="error" />
+    <img className="item-img" src={imageUrl} alt="carousel-item" />
     <div className="item-body">
       <div className="item-body-name">
         {name}
@@ -21,6 +21,7 @@ const CarouselItem = ({
   </div>
 );
 
+// Disable propTypes to clear log for testing
 CarouselItem.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
