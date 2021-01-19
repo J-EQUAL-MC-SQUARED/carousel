@@ -1,8 +1,8 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render, fireEvent } from '@testing-library/react';
-import Controller from '../client/src/components/Controller';
-import sampleRelatedItems from './sampleData';
+import Controller from '../../client/src/components/Controller';
+import sampleRelatedItems from '../sampleData';
 
 describe('<Controller />', () => {
   beforeEach(() => {

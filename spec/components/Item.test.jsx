@@ -1,8 +1,8 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import Item from '../client/src/components/Item';
-import sampleRelatedItems from './sampleData';
+import Item from '../../client/src/components/Item';
+import sampleRelatedItems from '../sampleData';
 
 describe('<Item />', () => {
   beforeEach(() => {
