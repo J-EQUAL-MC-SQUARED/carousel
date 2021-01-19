@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Carousel from './components/Carousel';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Carousel />, document.getElementById('app'));

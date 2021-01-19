@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CarouselItem from './CarouselItem';
+import Item from './Item';
 
-const CarouselList = ({ items }) => items.map((item) => (
-  <CarouselItem
+const List = ({ items }) => items.map((item) => (
+  <Item
+    key={item.name}
     name={item.name}
     price={item.price}
     stars={item.stars}
@@ -12,8 +13,8 @@ const CarouselList = ({ items }) => items.map((item) => (
   />
 ));
 
-CarouselList.propTypes = {
+List.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default CarouselList;
+export default List;

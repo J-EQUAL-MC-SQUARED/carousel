@@ -1,13 +1,13 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import CarouselItem from '../client/src/components/CarouselItem';
+import Item from '../client/src/components/Item';
 import sampleRelatedItems from './sampleData';
 
-describe('<CarouselItem />', () => {
+describe('<Item />', () => {
   beforeEach(() => {
     const { imageUrl, name, stars, price } = sampleRelatedItems[Math.floor(Math.random() * 9)];
-    render(<CarouselItem
+    render(<Item
       imageUrl={imageUrl}
       name={name}
       stars={stars}
@@ -28,5 +28,5 @@ describe('<CarouselItem />', () => {
     expect(name).not.toBeEmptyDOMElement();
   });
 
-  // tests for stars, price
+  // TODO: tests for stars, price
 });

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import CarouselList from './CarouselList';
+import List from './List';
 
 const Controller = ({ items }) => {
   const [left, setLeft] = useState(0);
@@ -9,9 +9,9 @@ const Controller = ({ items }) => {
   function leftBtn() {
     let btn = '';
     if (left === 0) {
-      btn = <button disabled onClick={() => setLeft(left + 450)} type="button">Left</button>;
+      btn = <button disabled id="left-btn" onClick={() => setLeft(left + 450)} type="button">Left</button>;
     } else {
-      btn = <button onClick={() => setLeft(left + 450)} type="button">Left</button>;
+      btn = <button id="left-btn" onClick={() => setLeft(left + 450)} type="button">Left</button>;
     }
     return btn;
   }
@@ -19,9 +19,9 @@ const Controller = ({ items }) => {
   function rightBtn() {
     let btn = '';
     if (left === -1350) {
-      btn = <button disabled onClick={() => setLeft(left - 450)} type="button">Right</button>;
+      btn = <button disabled id="right-btn" onClick={() => setLeft(left - 450)} type="button">Right</button>;
     } else {
-      btn = <button onClick={() => setLeft(left - 450)} type="button">Right</button>;
+      btn = <button id="right-btn" onClick={() => setLeft(left - 450)} type="button">Right</button>;
     }
     return btn;
   }
@@ -29,7 +29,7 @@ const Controller = ({ items }) => {
   return (
     <div id="carousel-controller">
       <div id="carousel-list" style={{ left: `${`${left}px`}` }}>
-        <CarouselList items={items} />
+        <List items={items} />
       </div>
       {leftBtn()}
       {rightBtn()}
