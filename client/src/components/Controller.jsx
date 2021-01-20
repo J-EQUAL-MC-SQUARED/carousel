@@ -9,9 +9,12 @@ const Controller = ({ items }) => {
   function leftBtn() {
     let btn = '';
     if (left === 0) {
-      btn = <button disabled id="left-btn" onClick={() => setLeft(left + 450)} type="button">Left</button>;
+      btn = <button disabled id="left-btn" onClick={() => setLeft(left + 450)} type="button">LEFT</button>;
     } else {
-      btn = <button id="left-btn" onClick={() => setLeft(left + 450)} type="button">Left</button>;
+      btn = <button id="left-btn" onClick={() => setLeft(left + 450)} type="button">
+        <svg id="carousel-left-arrow" viewBox="0 0 24 24">
+        </svg>
+      </button>;
     }
     return btn;
   }
