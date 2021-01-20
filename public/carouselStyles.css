@@ -56,7 +56,19 @@ img,
 }
 
 .item-body-stars {
-  margin: 4px 0px;
+  margin: 6px 0px 5px;
+  font-size: 18px;
+  width: 83px;
+}
+
+#stars-background {
+  color: grey;
+}
+
+#stars-front {
+  color: rgb(228, 121, 59);
+  overflow: hidden;
+  margin-top: -22px;
 }
 
 .item-body-price {
