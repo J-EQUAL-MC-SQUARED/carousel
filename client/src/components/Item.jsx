@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CarouselItem = ({
+const Item = ({
   imageUrl, name, stars, price,
 }) => (
 
@@ -22,11 +22,11 @@ const CarouselItem = ({
 );
 
 // Disable propTypes to clear log for testing
-CarouselItem.propTypes = {
+Item.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   stars: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
 };
 
-export default CarouselItem;
+export default Item;

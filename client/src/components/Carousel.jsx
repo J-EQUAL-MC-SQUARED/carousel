@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Controller from './Controller';
 
-class App extends React.Component {
+class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,4 +37,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Carousel;
