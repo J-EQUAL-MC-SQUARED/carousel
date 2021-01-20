@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Stars from './Stars';
 
 const Item = ({
   imageUrl, name, stars, price,
@@ -12,7 +13,7 @@ const Item = ({
         {name}
       </div>
       <div className="item-body-stars">
-        {`Stars: ${stars}`}
+        <Stars stars={stars} />
       </div>
       <div className="item-body-price">
         {`Today: $${price}`}

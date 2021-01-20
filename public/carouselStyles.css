@@ -56,7 +56,17 @@ img,
 }
 
 .item-body-stars {
-  margin: 4px 0px;
+  margin: 6px 0px 5px;
+  font-size: 20px;
+  width: 83px;
+}
+
+#background-stars {
+  color: grey;
+}
+
+#front-stars {
+  color: goldenrod;
 }
 
 .item-body-price {
