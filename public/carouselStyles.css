@@ -37,9 +37,14 @@ html {
 
 button {
   display:flex;
+  background-color: #fff;
   border: 1px solid #dadcdf;
   border-radius: 4px;
+  width: 43px;
+  height: 64px;
+  padding: 0px;
   align-items: center;
+  justify-content: center;
   position: absolute;
   top: 40%;
   cursor: pointer;
@@ -56,7 +61,6 @@ button {
 svg {
   width: 24px;
   height: 24px;
-
 }
 
 img,
