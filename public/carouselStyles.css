@@ -63,7 +63,13 @@ svg {
   height: 24px;
 }
 
-img,
+.carousel-list-item {
+  flex: 0 0 225px;
+  height: 340px;
+  margin: 5px;
+}
+
+img, 
 .item-image {
   height: 225px;
   width: 225px;
@@ -71,20 +77,19 @@ img,
   vertical-align: middle;
 }
 
-.modal {
-  visibility: visible;
-  position: relative;
-  bottom: 75px;
+.carousel-modal {
+  visibility: hidden;
+  background-color:aqua;
+  position: absolute;
+  bottom: 15px;
   width: 225px;
   height: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.carousel-list-item {
-  flex: 0 0 225px;
-  height: 340px;
-  margin: 5px;
+.carousel-list-item:hover .carousel-modal {
+  visibility: visible;
 }
 
 .item-body-name {
