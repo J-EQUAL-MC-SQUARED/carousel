@@ -71,6 +71,16 @@ img,
   vertical-align: middle;
 }
 
+.modal {
+  visibility: visible;
+  position: relative;
+  bottom: 75px;
+  width: 225px;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .carousel-list-item {
   flex: 0 0 225px;
   height: 340px;
