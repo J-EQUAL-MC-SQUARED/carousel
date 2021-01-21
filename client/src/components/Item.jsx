@@ -8,8 +8,8 @@ const Item = ({
 }) => (
 
   <div className="carousel-list-item">
-    <img className="item-img" src={imageUrl} alt="carousel-item" />
-    <div className="item-body">
+    <img className="carousel-item-image" src={imageUrl} alt="carousel-item" />
+    <div className="carousel-item-body">
       <div className="item-body-name">
         {name}
       </div>

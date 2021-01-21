@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 const Modal = ({ description }) => (
   <div className="carousel-modal">
-    {`${description}`}
+    <div>
+      {`${description}`}
+    </div>
   </div>
 );
 
