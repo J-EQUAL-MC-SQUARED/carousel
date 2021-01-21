@@ -35,6 +35,34 @@ html {
   left: max(0px, -1350px);
 }
 
+button {
+  display:flex;
+  background-color: #fff;
+  border: 1px solid #dadcdf;
+  border-radius: 4px;
+  width: 43px;
+  height: 64px;
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+}
+
+#left-btn {
+  left: -20px;
+}
+
+#right-btn {
+  right: -20px;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
 img,
 .item-image {
   height: 225px;
