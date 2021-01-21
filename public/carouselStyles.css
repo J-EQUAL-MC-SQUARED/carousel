@@ -3,14 +3,12 @@ html {
 }
 
 #carousel-main {
-  border: 1px solid black;
   display: block;
   line-height: 22px;
   width: 1000px;
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
-
 }
 
 #carousel-title {
@@ -78,18 +76,25 @@ img,
 }
 
 .carousel-modal {
-  visibility: hidden;
-  background-color:aqua;
+  display: none;
+  background-color:rgb(252, 252, 252);
+  box-sizing: border-box;
+  border: 2px groove rgb(139, 165, 177);
+  border-radius: 4px;
   position: absolute;
-  bottom: 15px;
+  bottom: 17px;
   width: 225px;
   height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 0px 2px;
+  overflow: auto;
+  white-space: normal;
+  text-align: left;
+  color: rgb(84, 86, 88);
 }
 
 .carousel-list-item:hover .carousel-modal {
-  visibility: visible;
+  display: block;
+  transition: all 0.6s;
 }
 
 .item-body-name {
