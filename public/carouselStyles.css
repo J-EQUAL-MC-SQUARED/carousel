@@ -83,10 +83,6 @@ svg {
   position: absolute;
   overflow: hidden;
   text-align: left;
-  --line-height: 1.6rem;
-  line-height: var(--line-height);
-  --max: 4;
-  max-height: calc(var(--line-height) * var(--max));
   color: rgb(84, 86, 88);
 }
 
