@@ -12,6 +12,7 @@ const Controller = ({ items }) => {
       btn = (
         <button disabled id="left-btn" onClick={() => setLeft(left + 450)} type="button">
           <svg id="carousel-left-arrow" viewBox="0 0 24 24">
+            <title>Left Scroll</title>
             <path d="M 17 2 L7 12 l 10 10" fill="none" stroke="#2F3337" strokeWidth="2" strokeLinecap="round" />
           </svg>
         </button>
@@ -20,6 +21,7 @@ const Controller = ({ items }) => {
       btn = (
         <button id="left-btn" onClick={() => setLeft(left + 450)} type="button">
           <svg id="carousel-left-arrow" viewBox="0 0 24 24">
+            <title>Left Scroll</title>
             <path d="M 17 2 L7 12 l 10 10" fill="none" stroke="#2F3337" strokeWidth="2" strokeLinecap="round" />
           </svg>
         </button>
@@ -34,6 +36,7 @@ const Controller = ({ items }) => {
       btn = (
         <button disabled id="right-btn" onClick={() => setLeft(left - 450)} type="button">
           <svg id="carousel-right-arrow" viewBox="0 0 24 24">
+            <title>Right Scroll</title>
             <path d="M 7 2 l 10 10 L 7 22" fill="none" stroke="#2F3337" strokeWidth="2" strokeLinecap="round" />
           </svg>
         </button>
@@ -42,6 +45,7 @@ const Controller = ({ items }) => {
       btn = (
         <button id="right-btn" onClick={() => setLeft(left - 450)} type="button">
           <svg id="carousel-right-arrow" viewBox="0 0 24 24">
+            <title>Right Scroll</title>
             <path d="M 7 2 l 10 10 L 7 22" fill="none" stroke="#2F3337" strokeWidth="2" strokeLinecap="round" />
           </svg>
         </button>
@@ -51,8 +55,9 @@ const Controller = ({ items }) => {
   }
 
   return (
-    <div id="carousel-controller">
-      <div id="carousel-list" style={{ left: `${`${left}px`}` }}>
+    // eslint-disable-next-line jsx-a11y/role-has-required-aria-props
+    <div id="carousel-controller" role="scrollbar">
+      <div id="carousel-list" style={{ left: `${`${left}px`}` }} role="list">
         <List items={items} />
       </div>
       {leftBtn()}
