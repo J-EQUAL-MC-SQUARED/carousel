@@ -29,7 +29,7 @@ class Carousel extends React.Component {
   render() {
     const { items } = this.state;
     return (
-      <div id="carousel-main">
+      <div id="carousel-main" role="main">
         <h2 id="carousel-title">Carousel List of Similar Items:</h2>
         <Controller items={items} />
       </div>

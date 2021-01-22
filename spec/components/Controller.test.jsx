@@ -37,6 +37,7 @@ describe('<Controller />', () => {
   test('should not be able to scroll past the start of the carousel', () => {
     const leftBtn = screen.getByRole('button', { name: 'Left Scroll'});
     expect(leftBtn).toBeDisabled();
+    expect(leftBtn).toBeDisabled();
     fireEvent.click(leftBtn);
     expect(leftBtn).toBeDisabled();
   });

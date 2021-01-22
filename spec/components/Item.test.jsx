@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Item from '../../client/src/components/Item';
 import sampleRelatedItems from '../sampleData';
 
@@ -16,7 +16,7 @@ describe('<Item />', () => {
     />);
   });
 
-  test('should render a product\'s image, name, star rating, and price', () => {
+  test('should render a product\'s image, name, star rating, price and description', () => {
     const image = screen.getByRole('img');
     expect(image).toBeInTheDocument();
     
@@ -36,7 +36,7 @@ describe('<Item />', () => {
      * Therefore, this breaks the hover-and-appear functionality of the Modal component,
      * and leaves no straightforward way to test that functionality here.
     */
-    const modal = document.querySelector('.carousel-modal');
+    const modal = screen.getByRole('tooltip');
     expect(modal).toBeVisible();
   });
 
