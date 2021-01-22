@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Stars from './Stars';
+import Modal from './Modal';
 
 const Item = ({
-  imageUrl, name, stars, price,
+  imageUrl, name, stars, price, description,
 }) => (
 
   <div className="carousel-list-item">
-    <img className="item-img" src={imageUrl} alt="carousel-item" />
-    <div className="item-body">
+    <img className="carousel-item-image" src={imageUrl} alt="carousel-item" />
+    <div className="carousel-item-body">
       <div className="item-body-name">
         {name}
       </div>
@@ -19,15 +20,16 @@ const Item = ({
         {`Today: $${price}`}
       </div>
     </div>
+    <Modal description={description} />
   </div>
 );
 
-// Disable propTypes to clear log for testing
 Item.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   stars: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default Item;
