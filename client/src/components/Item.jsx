@@ -7,7 +7,7 @@ const Item = ({
   imageUrl, name, stars, price, description,
 }) => (
 
-  <div className="carousel-list-item">
+  <div className="carousel-list-item" role="listitem">
     <img className="carousel-item-image" src={imageUrl} alt="carousel-item" />
     <div className="carousel-item-body">
       <div className="item-body-name">
