@@ -11,7 +11,7 @@ const generate = () => {
 
     while (count > 0) {
       const item = {
-        imageUrl: 'https://picsum.photos/650/460',
+        imageUrl: `https://picsum.photos/650/460?random=${count}`,
         name: utils.randomName(),
         stars: utils.randomStars(),
         description: utils.randomDescription(),
