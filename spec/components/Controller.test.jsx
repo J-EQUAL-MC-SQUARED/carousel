@@ -23,11 +23,12 @@ describe('<Controller />', () => {
 
   test('should be able to scroll all the way to the end of the carousel and back to the start', () => {
     const rightBtn = screen.getByRole('button', { name: 'Right Scroll'});
+    const leftBtn = screen.getByRole('button', { name: 'Left Scroll'})
+
     fireEvent.click(rightBtn);
     fireEvent.click(rightBtn);
     fireEvent.click(rightBtn);
     expect(screen.getByRole('list')).toHaveStyle({left: '-1350px'});
-    const leftBtn = screen.getByRole('button', { name: 'Left Scroll'})
     fireEvent.click(leftBtn);
     fireEvent.click(leftBtn);
     fireEvent.click(leftBtn);
@@ -36,7 +37,6 @@ describe('<Controller />', () => {
 
   test('should not be able to scroll past the start of the carousel', () => {
     const leftBtn = screen.getByRole('button', { name: 'Left Scroll'});
-    expect(leftBtn).toBeDisabled();
     expect(leftBtn).toBeDisabled();
     fireEvent.click(leftBtn);
     expect(leftBtn).toBeDisabled();
