@@ -11,6 +11,7 @@
     "test": "jest",
     "watch-dev": "webpack -w",
     "server": "nodemon server",
+    "start": "node server",
     "seed": "node database/seed.js"
   },
   "repository": {
