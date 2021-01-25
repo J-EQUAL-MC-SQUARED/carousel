@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import Controller from './Controller';
 
 class Carousel extends React.Component {
@@ -7,7 +8,7 @@ class Carousel extends React.Component {
     super(props);
     this.state = {
       // for now, productId is randomly generated
-      id: Math.floor(Math.random() * 100),
+      // id: Math.floor(Math.random() * 100),
       items: [],
     };
     this.getRelatedItems = this.getRelatedItems.bind(this);
@@ -18,8 +19,8 @@ class Carousel extends React.Component {
   }
 
   getRelatedItems() {
-    const { id } = this.state;
-    axios.get(`/api/products/${id}/images`)
+    const { productId } = this.props;
+    axios.get(`/api/products/${productId}/images`)
       .then((response) => {
         const { relatedItems } = response.data[0];
         this.setState({ items: relatedItems });
@@ -36,5 +37,9 @@ class Carousel extends React.Component {
     );
   }
 }
+
+Carousel.propTypes = {
+  productId: PropTypes.number.isRequired,
+};
 
 export default Carousel;
