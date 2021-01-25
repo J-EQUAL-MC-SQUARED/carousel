@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import Controller from './Controller';
 
 class Carousel extends React.Component {
@@ -29,18 +28,13 @@ class Carousel extends React.Component {
 
   render() {
     const { items } = this.state;
-    const { title } = this.props;
     return (
       <div id="carousel-main" role="main">
-        <h2 id="carousel-title">{title}</h2>
+        <h2 id="carousel-title">People Also Bought...</h2>
         <Controller items={items} />
       </div>
     );
   }
 }
-
-Carousel.propTypes = {
-  title: PropTypes.string.isRequired,
-};
 
 export default Carousel;
