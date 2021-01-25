@@ -24,5 +24,5 @@ app.get('/api/products/:id/images', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Express listening on port ${PORT}!`);
+  console.log(`Carousel service listening on port ${PORT}!`);
 });

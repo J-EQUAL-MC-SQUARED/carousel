@@ -8,7 +8,7 @@ class Carousel extends React.Component {
     super(props);
     this.state = {
       // for now, productId is randomly generated
-      id: Math.floor(Math.random() * 100),
+      // id: Math.floor(Math.random() * 100),
       items: [],
     };
     this.getRelatedItems = this.getRelatedItems.bind(this);
@@ -19,8 +19,8 @@ class Carousel extends React.Component {
   }
 
   getRelatedItems() {
-    const { id } = this.state;
-    axios.get(`/api/products/${id}/images`)
+    const { productId } = this.props;
+    axios.get(`/api/products/${productId}/images`)
       .then((response) => {
         const { relatedItems } = response.data[0];
         this.setState({ items: relatedItems });
@@ -29,10 +29,9 @@ class Carousel extends React.Component {
 
   render() {
     const { items } = this.state;
-    const { title } = this.props;
     return (
       <div id="carousel-main" role="main">
-        <h2 id="carousel-title">{title}</h2>
+        <h2 id="carousel-title">People Also Bought...</h2>
         <Controller items={items} />
       </div>
     );
@@ -40,7 +39,7 @@ class Carousel extends React.Component {
 }
 
 Carousel.propTypes = {
-  title: PropTypes.string.isRequired,
+  productId: PropTypes.number.isRequired,
 };
 
 export default Carousel;

@@ -1,4 +1,4 @@
-html {
+#carousels-section {
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -30,7 +30,7 @@ html {
   left: max(0px, -1350px);
 }
 
-button {
+#left-btn {
   display:flex;
   background-color: #fff;
   border: 1px solid #dadcdf;
@@ -43,17 +43,31 @@ button {
   position: absolute;
   top: 40%;
   cursor: pointer;
-}
-
-#left-btn {
   left: -20px;
 }
 
 #right-btn {
+  display:flex;
+  background-color: #fff;
+  border: 1px solid #dadcdf;
+  border-radius: 4px;
+  width: 43px;
+  height: 64px;
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
   right: -20px;
 }
 
-svg {
+#carousel-left-arrow {
+  width: 24px;
+  height: 24px;
+}
+
+#carousel-right-arrow {
   width: 24px;
   height: 24px;
 }
