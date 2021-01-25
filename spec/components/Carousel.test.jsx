@@ -5,7 +5,7 @@ import Carousel from '../../client/src/components/Carousel';
 
 describe('<Carousel />', () => {
   test('should render a carousel to the page', () => {
-    render(<Carousel title='Test title carousel'/>);
+    render(<Carousel productId={Math.floor(Math.random() * 100)} />);
     expect(screen.getByRole('main')).toBeInTheDocument();
     expect(screen.getByRole('heading')).not.toBeEmptyDOMElement();
     expect(screen.getByRole('scrollbar')).toBeInTheDocument();
