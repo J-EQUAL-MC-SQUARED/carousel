@@ -13,9 +13,9 @@
 
 #carousel-title {
   display: inline-block;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  margin: 10px 0px 28px 18px;
+  margin: 10px 0px 20px 5px;
 }
 
 #carousel-controller {
@@ -123,11 +123,11 @@
 }
 
 #stars-background {
-  color: grey;
+  color: rgb(210, 210, 210);
 }
 
 #stars-front {
-  color: rgb(228, 121, 59);
+  color: rgb(244, 186, 49);
   overflow: hidden;
   margin-top: -22px;
 }
