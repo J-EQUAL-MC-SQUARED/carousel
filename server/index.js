@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 // HTTP method handlers here
 
-app.get('/api/products/:id/images', (req, res) => {
+app.get('/api/carousels/:id', (req, res) => {
   const productID = req.params.id;
   carouselItem.find({ product_id: productID })
     .then((response) => res.send(response))
