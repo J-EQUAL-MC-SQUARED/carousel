@@ -10,6 +10,7 @@
   "scripts": {
     "test": "jest",
     "watch-dev": "webpack -w",
+    "build": "webpack",
     "server": "nodemon server",
     "start": "node server",
     "seed": "node database/seed.js"
