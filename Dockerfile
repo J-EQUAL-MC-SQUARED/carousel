@@ -12,8 +12,8 @@ COPY . /src/app
 
 # Install dependencies
 RUN npm install
-RUN npm run seed
-RUN npm run build
+RUN npm build
+# RUN npm run seed
 
 # expose a port
 EXPOSE 3002
