@@ -1,5 +1,5 @@
 # build from this 
-FROM node:15.7.0-alpine
+FROM node:14.15-alpine
 
 # make a folder in this container
 RUN mkdir -p /src/app
