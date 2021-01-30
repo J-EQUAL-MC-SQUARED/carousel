@@ -8,6 +8,6 @@ describe('<Carousel />', () => {
     render(<Carousel productId={Math.floor(Math.random() * 100)} />);
     expect(screen.getByRole('main')).toBeInTheDocument();
     expect(screen.getByRole('heading')).not.toBeEmptyDOMElement();
-    expect(screen.getByRole('scrollbar')).toBeInTheDocument();
+    expect(screen.getByRole('group')).toBeInTheDocument();
   });
 });

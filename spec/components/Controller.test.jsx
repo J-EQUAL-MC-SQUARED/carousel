@@ -11,7 +11,7 @@ describe('<Controller />', () => {
   });
 
   test('should render left and right buttons', () => {
-    const controller = screen.getByRole('scrollbar');
+    const controller = screen.getByRole('group');
     expect(controller).toContainElement(screen.getByRole('button', { name: 'Left Scroll'}));
     expect(controller).toContainElement(screen.getByRole('button', { name: 'Right Scroll'}));
   });

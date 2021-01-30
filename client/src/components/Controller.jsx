@@ -55,8 +55,7 @@ const Controller = ({ items }) => {
   }
 
   return (
-    // eslint-disable-next-line jsx-a11y/role-has-required-aria-props
-    <div id="carousel-controller" role="scrollbar">
+    <div id="carousel-controller" role="group">
       <div id="carousel-list" style={{ left: `${`${left}px`}` }} role="list">
         <List items={items} />
       </div>
