@@ -1,9 +1,13 @@
-const mongoose = require('mongoose');
+const { Sequelize } = require('sequelize');
 
-const mongoUri = 'mongodb://database/carouselDB';
+const sequelize = new Sequelize('postgres://postgres:postgres@localhost:5432/carousel');
 
-const db = mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(() => console.log('Problem connecting to MongoDB'));
+sequelize.authenticate()
+  .then(() => {
+    console.log('Connected to PostgreSQL');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
-module.exports = db;
+module.exports = sequelize;

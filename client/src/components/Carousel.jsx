@@ -22,6 +22,7 @@ class Carousel extends React.Component {
     const { productId } = this.props;
     axios.get(`/api/carousels/${productId}`)
       .then((response) => {
+        console.log(response);
         const { relatedItems } = response.data[0];
         this.setState({ items: relatedItems });
       });
