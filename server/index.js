@@ -4,6 +4,7 @@ const compression = require('compression');
 const cors = require('cors');
 const path = require('path');
 
+// eslint-disable-next-line no-unused-vars
 const db = require('../database');
 const router = require('./router');
 
@@ -11,10 +12,6 @@ const PUBLIC_DIR = path.resolve(__dirname, '../public');
 const PORT = process.env.PORT || 3000;
 
 const app = express();
-
-db.sync().then(() => {
-  console.log('DB Synced');
-});
 
 app.use(cors());
 app.use(compression());
