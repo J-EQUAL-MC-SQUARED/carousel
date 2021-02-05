@@ -1,8 +1,8 @@
-const { Sequelize } = require('sequelize');
+const { Client } = require('pg');
 
-const sequelize = new Sequelize('postgres://postgres:postgres@localhost:5432/carousel');
+const client = new Client('postgres://postgres:postgres@localhost:5432/carousel');
 
-sequelize.authenticate()
+client.connect()
   .then(() => {
     console.log('Connected to PostgreSQL');
   })
@@ -10,4 +10,4 @@ sequelize.authenticate()
     console.log(err);
   });
 
-module.exports = sequelize;
+module.exports = client;
