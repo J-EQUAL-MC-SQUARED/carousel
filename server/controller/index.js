@@ -2,7 +2,6 @@ const { Related } = require('../model');
 
 module.exports = {
   getRelated: (req, res) => {
-    console.log(req.params);
     const { id } = req.params;
     Related.findAll({
       where: {

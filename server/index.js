@@ -1,5 +1,5 @@
+require('newrelic');
 const express = require('express');
-const morgan = require('morgan');
 const compression = require('compression');
 const cors = require('cors');
 const path = require('path');
@@ -17,9 +17,7 @@ db.sync().then(() => {
 });
 
 app.use(cors());
-app.use(morgan('dev'));
 app.use(compression());
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(PUBLIC_DIR));
 
