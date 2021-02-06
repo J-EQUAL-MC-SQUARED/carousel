@@ -34,12 +34,12 @@
     "faker": "^5.3.1",
     "mongoose": "^5.11.11",
     "morgan": "^1.10.0",
+    "newrelic": "^7.1.1",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "sequelize": "^6.5.0"
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

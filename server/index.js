@@ -1,9 +1,10 @@
+require('newrelic');
 const express = require('express');
-const morgan = require('morgan');
 const compression = require('compression');
 const cors = require('cors');
 const path = require('path');
 
+// eslint-disable-next-line no-unused-vars
 const db = require('../database');
 const router = require('./router');
 
@@ -12,14 +13,8 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-db.sync().then(() => {
-  console.log('DB Synced');
-});
-
 app.use(cors());
-app.use(morgan('dev'));
 app.use(compression());
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(PUBLIC_DIR));
 
