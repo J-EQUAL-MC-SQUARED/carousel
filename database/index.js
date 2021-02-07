@@ -1,8 +1,14 @@
-const { Client } = require('pg');
+const { Pool } = require('pg');
 
-const client = new Client('postgres://postgres:postgres@localhost:5432/carousel');
+const pool = new Pool({
+  user: 'postgres',
+  password: 'postgres',
+  database: 'carousel',
+  port: 5432,
+  max: 1000,
+});
 
-client.connect()
+pool.connect()
   .then(() => {
     console.log('Connected to PostgreSQL');
   })
@@ -10,4 +16,4 @@ client.connect()
     console.log(err);
   });
 
-module.exports = client;
+module.exports = pool;
