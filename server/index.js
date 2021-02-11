@@ -12,7 +12,7 @@ const PUBLIC_DIR = path.resolve(__dirname, '../public');
 const PORT = process.env.PORT;
 
 async function build() {
-  const fastify = Fastify({ logger: true });
+  const fastify = Fastify();
   await fastify.register(require('middie'))
   fastify.use(require('compression')());
   return fastify;
