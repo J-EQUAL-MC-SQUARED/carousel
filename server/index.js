@@ -1,23 +1,31 @@
 require('newrelic');
 require('dotenv').config();
-const express = require('express');
-const compression = require('compression');
+const Fastify = require('fastify');
 const path = require('path');
 const controller = require('./controller');
+const { cache } = require('./middleware/cache');
 
 // eslint-disable-next-line no-unused-vars
 const db = require('../database');
-const router = require('./router');
 
 const PUBLIC_DIR = path.resolve(__dirname, '../public');
 const PORT = process.env.PORT;
 
-const app = express();
+async function build() {
+  const fastify = Fastify({ logger: true });
+  await fastify.register(require('middie'))
+  fastify.use(require('compression')());
+  return fastify;
+}
 
-app.use(compression());
-
-app.use('/api', router);
-
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
-});
+build()
+  .then((fastify) => {
+    fastify.addHook('onRequest', cache);
+    fastify.get('/api/carousels/:id', controller.getRelated);
+    fastify.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server listening on ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    throw err;
+  })
